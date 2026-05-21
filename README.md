@@ -119,8 +119,3 @@ This project is licensed under the MIT License.
 
 ---
 
-## 👩‍💻 Author
-
-Reshmitha
-
-- GitHub: https://github.com/reshmitha-tech
