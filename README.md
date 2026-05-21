@@ -84,7 +84,7 @@ flower-bouquet-hero/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/flower-bouquet-hero.git
+git clone https://github.com/your-username/flower-bouquet-hero-section.git
 ```
 
 Open the project folder and run `index.html`.
