@@ -96,7 +96,7 @@ Open the project folder and run `index.html`.
 Add your project screenshot here.
 
 ```md
-![Project Preview](preview-image.png)
+![Project Preview](Screenshot 2026-05-21 112358.png)
 ```
 
 ---
