@@ -3,40 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handcrafted Bouquets | Flower Shop</title>
+    <title>Handcrafted Bouquets | Premium Flower Shop</title>
+    <meta name="description" content="Elegant and feminine floral boutique offering premium, handcrafted bouquets for every emotion.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Boxicons for elegant lightweight icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <section class="hero-section">
-        <!-- Animated Background Elements -->
-        <div class="floral-animation-container" id="animationContainer">
-            <!-- SVG Petals will be injected by JavaScript -->
+    
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-flower">
+            <i class='bx bx-florist'></i>
         </div>
+    </div>
 
-        <!-- Centered Inner Content Box -->
-        <div class="hero-content-box">
-            <div class="hero-text-content">
-                <h1 class="hero-heading">Handcrafted<br>Bouquets for<br>Every Emotion</h1>
-                <p class="hero-subtext">Fresh flowers designed with elegance,<br>care, and a touch of love.</p>
-                <button class="hero-btn" id="shopBtn">
-                    <span class="btn-text">Shop Bouquets</span>
-                    <span class="btn-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </span>
-                    <span class="btn-hover-effect"></span>
-                </button>
-            </div>
-            <div class="hero-image-content">
-                <img src="bouquet2.png" alt="Purple Flower Bouquet" class="bouquet-image">
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class='bx bxs-florist'></i> Bloom & Co.
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#featured">Shop</a>
+                <a href="#about">About</a>
+                <a href="#occasions">Occasions</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" aria-label="Search"><i class='bx bx-search'></i></a>
+                <a href="#" aria-label="Cart"><i class='bx bx-shopping-bag'></i></a>
+                <div class="hamburger" id="hamburger">
+                    <i class='bx bx-menu'></i>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu"><i class='bx bx-x'></i></div>
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#featured" class="mobile-link">Shop</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#occasions" class="mobile-link">Occasions</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <!-- Animated Background Elements -->
+            <div class="floral-animation-container" id="animationContainer">
+                <!-- Image Petals will be injected by JavaScript -->
+            </div>
+
+            <!-- Centered Inner Content Box -->
+            <div class="hero-content-box">
+                <div class="hero-text-content reveal">
+                    <h1 class="hero-heading">Handcrafted<br>Bouquets for<br>Every Emotion</h1>
+                    <p class="hero-subtext">Fresh flowers designed with elegance,<br>care, and a touch of love.</p>
+                    <button class="hero-btn" id="shopBtn" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+                        <span class="btn-text">Shop Bouquets</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                        <span class="btn-hover-effect"></span>
+                    </button>
+                </div>
+                <div class="hero-image-content reveal delay-1">
+                    <img src="bouquet2.png" alt="Purple Flower Bouquet" class="bouquet-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Bouquets Section -->
+        <section class="section featured-section" id="featured">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured Bouquets</h2>
+                <p class="section-subtitle">Discover our most loved floral arrangements, handpicked for you.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card reveal">
+                    <div class="product-image-wrap">
+                        <img src="pink_peonies.png" alt="Peony Blush" class="product-image">
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Peony Blush</h3>
+                        <p class="product-desc">Soft pink peonies wrapped in silk paper.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">$65.00</span>
+                            <button class="add-to-cart-btn" aria-label="Add to cart"><i class='bx bx-cart-add'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card reveal delay-1">
+                    <div class="product-image-wrap">
+                        <img src="lavender_roses.png" alt="Lavender Dream" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lavender Dream</h3>
+                        <p class="product-desc">A mix of soft lilac roses and lavender sprigs.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">$55.00</span>
+                            <button class="add-to-cart-btn" aria-label="Add to cart"><i class='bx bx-cart-add'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card reveal delay-2">
+                    <div class="product-image-wrap">
+                        <img src="white_lilies.png" alt="Pure Elegance" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pure Elegance</h3>
+                        <p class="product-desc">White lilies and elegant orchids for special days.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">$85.00</span>
+                            <button class="add-to-cart-btn" aria-label="Add to cart"><i class='bx bx-cart-add'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-btn-wrap reveal delay-1">
+                <a href="#shop" class="secondary-btn">View All Bouquets</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="section about-section" id="about">
+            <div class="about-grid">
+                <div class="about-image-col reveal">
+                    <img src="mixed_pastel.png" alt="Florist arranging flowers" class="about-img">
+                    <div class="about-img-decoration"></div>
+                </div>
+                <div class="about-text-col reveal delay-1">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title text-left">Bringing Beauty to Every Moment</h2>
+                    <p class="about-text">At Bloom & Co., we believe that every emotion deserves to be expressed beautifully. Founded with a passion for premium floristry, our boutique focuses on crafting elegant, handcrafted bouquets that speak directly to the heart.</p>
+                    <p class="about-text">We source only the freshest blooms, arranging them with care, elegance, and a touch of love, ensuring that your special moments are unforgettable.</p>
+                    <a href="#contact" class="hero-btn about-btn">
+                        <span class="btn-text">Read Our Story</span>
+                        <span class="btn-hover-effect"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section features-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">Why Choose Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class='bx bx-leaf'></i></div>
+                    <h3 class="feature-title">Fresh Flowers</h3>
+                    <p class="feature-desc">We source locally and internationally to guarantee the freshest and longest-lasting blooms.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon"><i class='bx bx-gift'></i></div>
+                    <h3 class="feature-title">Premium Packaging</h3>
+                    <p class="feature-desc">Every bouquet is wrapped in luxurious silk paper and finished with elegant ribbons.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon"><i class='bx bx-rocket'></i></div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-desc">Reliable same-day and next-day delivery options to make sure your gift arrives on time.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <div class="feature-icon"><i class='bx bx-heart'></i></div>
+                    <h3 class="feature-title">Handcrafted with Love</h3>
+                    <p class="feature-desc">Our expert florists design every arrangement with meticulous attention to detail.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Occasions Categories -->
+        <section class="section occasions-section" id="occasions">
+            <div class="section-header reveal">
+                <h2 class="section-title">Shop by Occasion</h2>
+                <p class="section-subtitle">Find the perfect arrangement for life's special moments.</p>
+            </div>
+            
+            <div class="occasions-grid">
+                <a href="#birthday" class="category-card reveal">
+                    <img src="pink_peonies.png" alt="Birthday" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Birthday</h3>
+                    </div>
+                </a>
+                <a href="#wedding" class="category-card reveal delay-1">
+                    <img src="white_lilies.png" alt="Wedding" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Wedding</h3>
+                    </div>
+                </a>
+                <a href="#anniversary" class="category-card reveal delay-2">
+                    <img src="lavender_roses.png" alt="Anniversary" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Anniversary</h3>
+                    </div>
+                </a>
+                <a href="#sympathy" class="category-card reveal delay-3">
+                    <img src="white_lilies.png" alt="Sympathy" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Sympathy</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            
+            <div class="testimonials-slider reveal">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class='bx bxs-quote-alt-left'></i></div>
+                    <p class="testimonial-text">"The most beautiful bouquet I have ever received. The packaging was so luxurious, and the flowers lasted for weeks!"</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">
+                            <img src="https://placehold.co/100x100/EEDDF5/111111?text=Sarah+J." alt="Sarah J.">
+                        </div>
+                        <div>
+                            <h4 class="customer-name">Sarah J.</h4>
+                            <div class="star-rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class='bx bxs-quote-alt-left'></i></div>
+                    <p class="testimonial-text">"I ordered flowers for my mother's birthday. They were delivered on time and looked exactly like the picture. Highly recommended!"</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">
+                            <img src="https://placehold.co/100x100/EEDDF5/111111?text=Michael+R." alt="Michael R.">
+                        </div>
+                        <div>
+                            <h4 class="customer-name">Michael R.</h4>
+                            <div class="star-rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class='bx bxs-quote-alt-left'></i></div>
+                    <p class="testimonial-text">"Bloom & Co. handled my wedding florals perfectly. Everything was elegant, soft, and completely matched my dream aesthetic."</p>
+                    <div class="customer-info">
+                        <div class="customer-avatar">
+                            <img src="https://placehold.co/100x100/EEDDF5/111111?text=Emily+L." alt="Emily L.">
+                        </div>
+                        <div>
+                            <h4 class="customer-name">Emily L.</h4>
+                            <div class="star-rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram / Gallery Preview -->
+        <section class="section gallery-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">Follow Us @BloomAndCo</h2>
+                <p class="section-subtitle">Get inspired by our latest creations on Instagram.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item reveal"><img src="pink_peonies.png" alt="Gallery image"></div>
+                <div class="gallery-item reveal delay-1"><img src="lavender_roses.png" alt="Gallery image"></div>
+                <div class="gallery-item reveal delay-2"><img src="white_lilies.png" alt="Gallery image"></div>
+                <div class="gallery-item reveal delay-3"><img src="mixed_pastel.png" alt="Gallery image"></div>
+                <div class="gallery-item reveal delay-4 hidden-mobile"><img src="pink_peonies.png" alt="Gallery image"></div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section newsletter-section">
+            <div class="newsletter-box reveal">
+                <h2 class="newsletter-title">Join Our Newsletter</h2>
+                <p class="newsletter-desc">Subscribe to receive updates on new arrivals, special offers, and floral care tips.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address" required class="newsletter-input">
+                    <button type="submit" class="hero-btn newsletter-btn">
+                        <span class="btn-text">Subscribe</span>
+                        <span class="btn-hover-effect"></span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo"><i class='bx bxs-florist'></i> Bloom & Co.</a>
+                <p class="footer-text">Premium handcrafted bouquets for every emotion, delivered with care and a touch of luxury.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" aria-label="Pinterest"><i class='bx bxl-pinterest'></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Shop Bouquets</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#occasions">Occasions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4 class="footer-title">Customer Care</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Care Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4 class="footer-title">Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class='bx bx-map'></i> 123 Floral Avenue, New York, NY</li>
+                    <li><i class='bx bx-phone'></i> +1 (555) 123-4567</li>
+                    <li><i class='bx bx-envelope'></i> hello@bloomandco.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bloom & Co. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
